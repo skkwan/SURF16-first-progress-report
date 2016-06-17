@@ -1,202 +1,60 @@
 \documentclass{article}
 
-\usepackage{fancyhdr}
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{caption}
-\usepackage{gensymb}
+\usepackage{fancyhdr, graphicx, amssymb, caption, gensymb}
 \usepackage[labelfont=bf]{caption}
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
-\usepackage{setspace} \onehalfspacing %\singlespacing % %\doublespacing %\setstretch{1.1}
-
+\usepackage{setspace} \singlespacing %\onehalfspacing \singlespacing % %\doublespacing %\setstretch{1.1}
 \DeclareGraphicsExtensions{.png}
 
 \title{Week 3 Progress Report}
 \author{Stephanie Kwan \\
 \\
-Mentors: Professor Mansi Kasliwal \\
-Dr. Ryan Lau, Jacob Jencson
+Mentors: Professor Mansi Kasliwal, Dr. Ryan Lau, Jacob Jencson
 }
-
 \begin{document}
 \maketitle
-\renewcommand{\headrulewidth}{0.0pt}
 \pagestyle{fancy}
-\thispagestyle{fancy}
 \lhead{Stephanie Kwan}
-\chead{}
-\rhead{Caltech SURF 2015}
+\chead{Week 3 Progress Report}
+\rhead{SURF 2016}
+
+\section{Motivation and background}
+In the field of time-domain astronomy, the primary objective of studying transient astronomical events (known simply as ``transients'') is to develop our understanding of how astronomical phenomena ranging from supernovae to interstellar medium originate and evolve over time. While stars and galaxies evolve on the order of millions and billions of years, transients typically occur on timescales of seconds to years. From a measurement standpoint, sites of potential or active transient activity are measured from time-to-time on Earth or spacecraft. Snapshots are taken in different parts of the electromagnetic spectrum (gamma-ray, X-ray, infrared, visible), which are divided further into well-defined filters with known sensitivities to incident radiation. 
+
+
+The Spitzer InfraRed Intensive Transient Survey (SPIRITs) is an ongoing systematic search of 194 galaxies within 20 Mpc, on timescales ranging between a week and a year, to a depth of 20 magnitudes \cite{SPIRITS proposal}. The search is based on the Spitzer Space Telescope's Infrared Array Camera (IRAC), which ran out of coolant at one point and can currently only operate on 3.6 $\mu$m and 4.5$\mu$m channels. Whenever new measurements are available every few weeks, a pipeline automatically performs processing and image subtraction with archival data. Members of the SPIRITs group visually vet the candidates and perform follow-up studies on interesting transients and variables to determine whether they exhibit behavior that falls within known categories. The 10th cycle of SPIRITs has discovered over 40 IR transients and over 1200 IR variables, some of which are ``typical'' variables or explosive transients such as pulsating asymptotic giant branch stars or supernovae explosions respectively, but some are much more unique \cite{Email}. 
+
+
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{PSR}
+% 	\caption{(a) Schematic of the polyhedral specular reflector (PSR) design \cite{Eisler}. (a) The polyhedral specular reflector (PSR), with a hollow primary concentrator, a stack of seven tilted filters in a solid prism, the solid secondary concentrators, and their corresponding solar cells labeled with their bandgap energies. (b) The submodules in a module array, whose size will depend on factors such as the cost, weight, and power output characteristics of the submodules.}
+% 	\label{PSR}
+% \end{figure}
+
+\section{Problem and approach}
+
+
+\section{Progress and challenges}
+
+
+\section{Goals for next month}
+
 
 %==================================%
-%| Motivation for project					          |
-%==================================%
-\section*{Motivation and background}
-Lowering the cost of solar energy per kilowatt-hour produced is a high-priority goal in the renewable energy research and industry effort. Since there are fixed costs per solar cell (e.g. installation costs) that cannot be avoided, developing high efficiency solar cells is the most effective goal researchers can work towards to attain low levelized cost of energy (LCOE) renewable energy sources.
-
-The Atwater Group's Full-Spectrum team is completing a prototype of a ultra-high efficiency spectrum-splitting polyhedral specular reflector (PSR) solar module, shown in Fig. \ref{PSR}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.6\textwidth]{PSR}
-	\caption{(a) Schematic of the polyhedral specular reflector (PSR) design \cite{Eisler}. (a) The polyhedral specular reflector (PSR), with a hollow primary concentrator, a stack of seven tilted filters in a solid prism, the solid secondary concentrators, and their corresponding solar cells labeled with their bandgap energies. (b) The submodules in a module array, whose size will depend on factors such as the cost, weight, and power output characteristics of the submodules.}
-	\label{PSR}
-\end{figure}
-
-The PSR submodule consists of a hollow primary concentrator 30 cm tall, which concentrates light into a glass column. Seven Bragg reflectors evenly spaced one cm apart are mounted at 45$\degree$ and separate the light into seven sub-bands spanning the visible and near-IR spectrum (see Table \ref{subbands}). Each sub-band has a glass secondary concentrator that focuses the beam and sends it to a small solar cell, which has a bandgap energy optimized for its respective sub-band. Due to the conservation of \'{e}tendue, which is the product of the area of the cross-section of the light beam and the angular spread of the beam, it is optimal for the primary concentrator to be a weak focuser. This keeps area large initially and minimizes the angular spread of the light, which is important for the efficiency of the angular-sensitive Bragg reflectors. The concentrators and Bragg reflectors have shown good matching between theoretical and experimental yields. Though the seven cells situated at the end of the secondary concentrators have not been completely fabricated, the design is expected to have $\geq$50\% submodule efficiency, which would set a world record. However, it is desirable to lower the production cost per module in order to make the module more competitive and attractive in the alternative energy market. 
-
-\begin{table}[h]
-\begin{center}
-\caption{The sub-bands of the PSR submodule spectrum}
-\label{subbands}
-\begin{tabular}{|c|c|}
-\hline
-Solar cell bandgap energy (eV) & Wavelength range (nm) \\ \hline
-2.11                           & 300-588                      \\
-1.78                           & 589-697                      \\
-1.58                           & 698-785                      \\
-1.42                           & 786-873                      \\
-1.15                           & 874-1078                     \\
-0.93                           & 1079-1333                    \\
-0.74                           & 1334-1676                    \\ \hline
-\end{tabular}
-\end{center}
-\caption*{The solar cell bandgap energies and the wavelength bands, spanning the visible and near-IR spectrum.}
-\end{table}
-
-
-%----------------------------------------%
-%| Introducing HGCs		    |
-%----------------------------------------%
-
-The Bragg reflectors consist of layered materials with precise thicknesses and are manufactured by a slow vapor depostion process. There are two drawbacks to implementing them: they contribute significantly to the submodule cost, and they are highly sensitive to the angular spread of incident light. A potential alternative to the Bragg reflectors that addresses both of their shortcomings lies in resonance-based dielectric subwavelength-scale high-refractive index contrast gratings (HCG). A HCG consisting of subwavelength-scale silicon cylinders patterned on a SiO$_2$ substrate (see Fig. \ref{Moitra cylinders}) has demonstrated $\geq$98\% average reflectivity in a 200 nm infrared band under normal incidence \cite{Moitra1}. Strong angle and polarization independent reflection bands have been simulated for similar cylindrical HCGs (see Fig. \ref{EFRCppt}). The tunability of these properties suggests that HCGs are viable candidates for high-reflectivity optical filters. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{MoitraHCG}
-	\caption{A high-contrast grating from literature \cite{Moitra1}, with (a) silicon cylinders 400 nm in width and (b) 500 nm in height (scale bar of 1 micron). (c) $\ge$98\% reflectivity was achieved in a 200 nm-wide band both experimentally and in simulations by a Floquet mode solver in HFSS, a finite element method structural electromagnetic simulator.}
-	\label{Moitra cylinders}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{EFRCppt}
-	\caption{Simulation of angle and polarization independence of a reflection band for a HCG with thickness = 175 nm, lattice spacing = 600 nm, and disk radius = 150 nm \cite{Darbe}. (a) The reflectance vs. grating thickness for average polarized light indicates that a thickness of 175 nm gives a sharp and strong reflectance. Selecting this thickness, the reflectance band holds for (c) average polarized light and (d) both transverse electric (TE) and transverse magnetic (TM) polarized light. Since sunlight does not have a net polarization, it is important that the optical filters are efficient for TE and TM light. (c) This HCG also displays high reflectance for both 0$\degree$ and 45$\degree$ incident light. (Images taken from \cite{Darbe}.)}
-	\label{EFRCppt}
-\end{figure}
-
-%----------------------------------------%
-%| Physical explanation for HCGs    |
-%----------------------------------------%
-Physical explanations for the high-reflectivity properties of HCGs have been attributed to Fabry-Perot Mie resonances \cite{Karagodsky}, which describe the solutions to Maxwell's equations for a plane wave scattered by any homogeneous geometry in which separate equations can be written for the solutions' radial and angular dependencies. In HCGs, peaks in reflectivity can be attributed to electric and magnetic dipole resonances. If the grating is structured such that the electric and magnetic dipole resonances are quite close to each other, the peaks will be close enough to constitute an overall broadband reflectivity. This selective reflectivity is exactly the type of behavior that we desire from the spectrum-splitting optics in the PCR.
-\pagebreak
-
-%==================================%
-%| Methods and approach				          |
-%==================================%
-\rule{450pt}{1pt}
-\section*{Methods and approach}
-The goal of my project is to (1) identify via simulation and (2) fabricate and test a promising geometry and material choice for HCGs with high reflectivity in at least one of the sub-bands in the PSR submodule. The HCG must meet the criteria of incident angle and polarization independence in order for it to have a chance of being implemented in the PSR. This project fits into ongoing work on both implementing HCG into spectrum-splitting optics, as well as the Full Spectrum team's own design. 
-
-%----------------------------------------%
-%| RCWA breakdown 		   |
-%----------------------------------------%
-\subsection*{Rigorous Coupled-Wave Analysis}
-The simulation algorithm of choice is rigorous coupled-wave analysis (RCWA). It is a powerful frequency-domain method that applies Maxwell's equations analytically to model scattering from periodic structures. It easily incorporates material dispersion and can model oblique-angle incident waves. 
-For structures that are described well by Fourier series with few terms, RCWA is fast and efficient. This includes all periodic dielectric structures of low to medium index contrast without fine features \cite{Rumpf}. RCWA is based on the Transfer Matrix Method (TMM), which transforms Maxwell's equations to the Fourier domain and converts them to matrix form. The TMM then computes the transfer matrix of the layers of the material. By using matrix representations of the electric and magnetic modes and how the modes propagate, the transfer matrices of the individual layers are computed. The global transfer matrix can then be computed by multiplying the individual transfer matrices (see Fig. \ref{TMMschematic}). However, the TMM is inherently unstable because it treats forward and backward traveling waves the same way, so the waves do not ever decay. RCWA addresses this by calculating the Poyning vector of the fields and using this to separate waves that are forward and backward propagating in the eigenvector and eigenvalue matrices \cite{TMMLecture}. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{TMMschematic}
-	\caption{The Transfer Matrix Method, which works through the device one layer at a time and calculates an overall global matrix, allowing the incident, reflected, and transmitted electric and magnetic field modes to be computed. The order of multiplication of the matrices is from last layer to first because the transfer matrix of the $i$th layer is defined as $c_{i+1} = T_i \cdot c_i$ (Image taken from \cite{TMMLecture}.)}
-	\label{TMMschematic}
-\end{figure}
-
-RCWA works best for structures with unit cells that are z-uniform; i.e. the unit cells can be as complicated as the user wishes in the x and y directions, but is ideally homogeneous and repeating in the z direction \cite{RCWAImplementationLecture}. The mathematical approach is similar to that of TMM; the algorithm loops through each layer to build its eigenvalue problem, compute the eigenmodes, compute the layer scattering matrix, and update the device scattering matrix. The transverse (x and y) components of the reflected and transmitted fields are computed based on the source field and source modal coefficients. The longitudinal field components are calculated from the transverse components using a Fourier domain derivative of the divergence equation $\triangledown \cdot E = 0$. The reflected and transmitted power are computed from the reflected and transmitted field components. RCWA differs from TMM in that it accounts for a large set of spatial harmonics traveling around the layers, instead of a single plane wave traveling through the device\cite{RCWAImplementationLecture}.  
-
-%----------------------------------------%
-%| MOST and DiffractMOD modeling |
-%----------------------------------------%
-\subsection*{MOST and DiffractMOD modeling}
-DiffractMOD is a program that is based on the RCWA method and utilizes the RSoft CAD system to accurately and precisely create both periodic and non-periodic components without piecewise approximation assumptions \cite{DiffractMOD}. After defining the dimensions and materials of a device's unit cell in RSoft CAD, the user passes simulation parameters such as the incident angle of the light plane wave, grid size, and wavelength range of interest to DiffractMOD. The outputs we are primarily interested in are total reflection, total transmission, first order transmission, and first order reflection as functions of wavelength. 
-
-In the first month, two HCG designs from literature \cite{Moitra1} \cite{Yao} were modeled in RSoft CAD. The first is shown in Fig. \ref{Moitra cylinders} and the second is taken from a study that proposed a normal incidence optimized HCG spectrum-splitting optic with six layers (see Fig. \ref{YaoLayers}). Among the six layers, the third layer was selected. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{YaoLayers}
-	\caption{(a) Choice of materials and optimal parameters for a six-layer spectrum-splitting optic \cite{Yao}. For each layer, the optical properties (optimal reflected wavelength band, the material, refractive index $n$ and permittivity $k$ ranges for the band) and the grating's physical properties (pitch or period of the unit cell and the width and height of the rectangular prism) are given. (b) The structure of the first layer is T-shaped in order to achieve better light-trapping while the others belong to longer wavelengths that can be sufficiently trapped by a simple rectangular prism geometry \cite{Yao}.}
-	\label{YaoLayers}
-\end{figure}
-
-The RSoft CAD models are shown in Fig. \ref{MoitraCAD} and \ref{YaoCAD}. 
-
-For each design, the total reflection over the visible and near-IR range was computed in DiffractMOD using MOST - the Multi-Variable Optimizer and Scanner Tool. MOST operates alongside RSoft device simulators and is an optimizer tool that assesses simulation results as functions of user-defined variables \cite{MOST}. For our purpose, MOST used in conjunction with DiffractMOD enabled us to perform convergence testing for the total  reflection and transmission. Due to limitations in computing time and power, realistically only a finite number of harmonics can be modeled. One of our first questions was how many harmonics were effectively sufficient for convergence. 
-
-
-- Moitra and Yao, convergence testing plot
-
-- Collected literature data for a-Si, TiO2, and GaP (add as appendix)
-
-%----------------------------------------%
-%| Lab work		 		   |
-%----------------------------------------%
-\subsection*{Lab work}
-- Run-down of SARP setup: a laser sweeps across a range of wavelengths, a small part of the beam is split into a reference diode for proper calibration of the measured signal, the rest of the beam passes through a series of mirrors and reflectors that focus it through an objective and onto a sample that has to be aligned perpendicularly to the beam, and a detector behind the sample measures photocurrent. Depending on whether transmission or reflectance is being measured, the control measurements are different.  
-
-- SARP data for a-Si deposition from PECVD (should be analyzed)
-
-- Patterned Si cylinders on SiO$_2$ using nanoimprint lithography - verified topology under SEM (need figures - not sent to me yet?)
-
-%==================================%
-%| Goals for next month					          |
-%==================================%
-\begin{center}
-\rule{450pt}{1pt}
-\end{center}
-\section*{Goals for the next month}
-- Finish validation of modeling
-
-- Begin original simulations while varying parameters such as pitch/width/depth
-
-- Measure properties of fabricated structures (e.g. the patterned Si cylinders on SiO$_2$) using the SARP and the integrating sphere (unclear on how the integrating sphere works)
-
-%==================================%
-%| Bibliography 						          |
+%| Bibliography 				   |
 %==================================%
 \begin{center}
 \rule{450pt}{1pt}
 \end{center}
 \pagebreak
 \begin{thebibliography}{9}
-\bibitem{Eisler}
-C. Eisler, P. Espinet, C. A. Flowers, S. Darbe, E. Warmann, J. Lloyd, M. Dee, H. Atwater. ``Designing and Prototyping the Polyhedral Specular Reflector, a Spectrum-Splitting Module with Projected $>$50\% Efficiency," (Manuscript in preparation).
+\bibitem{SPIRITS proposal}
+	Kasliwal, Mansi, Yi Cao, Frank Masci, George Helou, Robert Williams, John Bally, Howard Bond, Patricia Whitelock, et al. \textit{SPIRITS: SPitzer InfraRed Intensive Transients Survey: General Proposal.} Carnegie Institution of Washington, n.d. Web. 
 
-\bibitem{Moitra1}
-P. Moitra, B. Slovick, Z. G. Yu, S. Krishnamurthy, J. Valentine. ``Experimental demonstration of a broadband all-dielectric metamaterial perfect reflector," \emph{Applied Physics Letters}, vol. 104, 171102, Jul 2014.
+\bibitem{Email}
+	Lau, Ryan. February 17th, 2016 email correspondance. 
 
-\bibitem{Darbe}
-Darbe, Sunita. ``Subwavelength Resonant Dielectric Gratings as Selective Reflectors for Photovoltaic Applications." LMI Energy Frontier Research Centers meeting. Caltech, Pasadena, CA. 1 July 2015. Meeting.
-
-\bibitem{Karagodsky}
-Karagodsky, Vadim, Christopher Chase, and Connie J. Chang-Hasnain. ``Matrix Fabry–Perot Resonance Mechanism in High-contrast Gratings." Optics Letters 36.9 (2011): 1704-706. The Optical Society of America. Web. 6 July 2015.
-
-\bibitem{Yao}
-Yao, Yuhan, He Liu, and Wei Wu. ``Spectrum Splitting Using Multi-layer Dielectric Meta-surfaces for Efficient Solar Energy Harvesting." Applied Physics 115 (2014): 713-19. ScienceDirect. Web. 6 July 2015.
-
-\bibitem{Rumpf}
-Rumpf, Raymond C.  ``Design and Optimization of Nano-Optical Elements by Coupling Fabrication to Optical Behavior." Thesis. University of Central Florida, 2006. Electronic Theses and Dissertations. College of Optics, FCLA, Aug. 2006. Web. 7 July 2015.
-
-\bibitem{TMMLecture}
-Rumpf, Raymond C. ``Lecture 4: Transfer Matrix Method." CEM Lectures. University of Texas, El Paso. 6 Sept. 2013. CEM Lectures Youtube Channel. Web. 7 July 2015.
-
-\bibitem{RCWAImplementationLecture}
-Rumpf, Raymond C. ``Lecture 20: Implementation of Rigorous Coupled-Wave Analysis." CEM Lectures. University of Texas, El Paso. 8 Oct. 2013. CEM Lectures Youtube Channel. Web. 7 July 2015.
-
-\bibitem{DiffractMOD}
-\emph{Synopsys DiffractMOD User Guide v2013.12}, pp. 13-14, 2013.
-
-\bibitem{MOST}
-\emph{Sypnopsys RSoft MOST User Guide v2013.12}, 2013.
 
 \end{thebibliography}
 
